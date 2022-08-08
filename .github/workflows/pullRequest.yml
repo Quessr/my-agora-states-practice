@@ -11,5 +11,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16'
-      - run: npm install
-      - run: npm test
+      - name: client dependency install
+        run: npm install
+        working-directory: my-agora-staes-client
+      - name: client test
+        run: npm test
+        working-directory: my-agora-staes-client
